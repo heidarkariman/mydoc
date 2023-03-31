@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Scandoc{% endblock %}
+
+{% block body %}
+    <h1>Edit Scandoc</h1>
+
+    {{ include('scandoc/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_scandoc_index') }}">back to list</a>
+
+    {{ include('scandoc/_delete_form.html.twig') }}
+{% endblock %}

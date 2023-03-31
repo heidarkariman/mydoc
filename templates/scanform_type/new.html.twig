@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ScanformType{% endblock %}
+
+{% block body %}
+    <h1>Create new ScanformType</h1>
+
+    {{ include('scanform_type/_form.html.twig') }}
+
+    <a href="{{ path('app_scanform_type_index') }}">back to list</a>
+{% endblock %}

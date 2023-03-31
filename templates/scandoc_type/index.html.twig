@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ScandocType index{% endblock %}
+
+{% block body %}
+    <h1>ScandocType index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for scandoc_type in scandoc_types %}
+            <tr>
+                <td>{{ scandoc_type.id }}</td>
+                <td>{{ scandoc_type.title }}</td>
+                <td>
+                    <a href="{{ path('app_scandoc_type_show', {'id': scandoc_type.id}) }}">show</a>
+                    <a href="{{ path('app_scandoc_type_edit', {'id': scandoc_type.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_scandoc_type_new') }}">Create new</a>
+{% endblock %}

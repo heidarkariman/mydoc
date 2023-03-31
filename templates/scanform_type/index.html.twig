@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ScanformType index{% endblock %}
+
+{% block body %}
+    <h1>ScanformType index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for scanform_type in scanform_types %}
+            <tr>
+                <td>{{ scanform_type.id }}</td>
+                <td>{{ scanform_type.title }}</td>
+                <td>
+                    <a href="{{ path('app_scanform_type_show', {'id': scanform_type.id}) }}">show</a>
+                    <a href="{{ path('app_scanform_type_edit', {'id': scanform_type.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_scanform_type_new') }}">Create new</a>
+{% endblock %}

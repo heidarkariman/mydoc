@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Scanform index{% endblock %}
+
+{% block body %}
+    <h1>Scanform index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>File_path</th>
+                <th>File_name</th>
+                <th>Created_at</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for scanform in scanforms %}
+            <tr>
+                <td>{{ scanform.id }}</td>
+                <td>{{ scanform.filePath }}</td>
+                <td>{{ scanform.fileName }}</td>
+                <td>{{ scanform.createdAt ? scanform.createdAt|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_scanform_show', {'id': scanform.id}) }}">show</a>
+                    <a href="{{ path('app_scanform_edit', {'id': scanform.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_scanform_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Scandoc index{% endblock %}
+
+{% block body %}
+    <h1>Scandoc index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>File_path</th>
+                <th>File_name</th>
+                <th>Created_at</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for scandoc in scandocs %}
+            <tr>
+                <td>{{ scandoc.id }}</td>
+                <td>{{ scandoc.filePath }}</td>
+                <td>{{ scandoc.fileName }}</td>
+                <td>{{ scandoc.createdAt ? scandoc.createdAt|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_scandoc_show', {'id': scandoc.id}) }}">show</a>
+                    <a href="{{ path('app_scandoc_edit', {'id': scandoc.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_scandoc_new') }}">Create new</a>
+{% endblock %}

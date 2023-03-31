@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ScanformType{% endblock %}
+
+{% block body %}
+    <h1>ScanformType</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ scanform_type.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ scanform_type.title }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_scanform_type_index') }}">back to list</a>
+
+    <a href="{{ path('app_scanform_type_edit', {'id': scanform_type.id}) }}">edit</a>
+
+    {{ include('scanform_type/_delete_form.html.twig') }}
+{% endblock %}

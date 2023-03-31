@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ScandocType{% endblock %}
+
+{% block body %}
+    <h1>Create new ScandocType</h1>
+
+    {{ include('scandoc_type/_form.html.twig') }}
+
+    <a href="{{ path('app_scandoc_type_index') }}">back to list</a>
+{% endblock %}
