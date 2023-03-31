@@ -1,0 +1,43 @@
+
+use mydoc;
+
+INSERT INTO scandoc_type (title) VALUES ("Type A");
+INSERT INTO scandoc_type (title) VALUES ("Type B");
+INSERT INTO scandoc_type (title) VALUES ("Type C");
+INSERT INTO scandoc_type (title) VALUES ("Type D");
+INSERT INTO scandoc_type (title) VALUES ("Type E");
+INSERT INTO scandoc_type (title) VALUES ("Type F");
+INSERT INTO scandoc_type (title) VALUES ("Type G");
+INSERT INTO scandoc_type (title) VALUES ("Type H");
+INSERT INTO scandoc_type (title) VALUES ("Type I");
+INSERT INTO scandoc_type (title) VALUES ("Type J");
+
+
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (1, "/path/to/file1", "file1.pdf", "2023-03-31");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (2, "/path/to/file2", "file2.pdf", "2023-03-30");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (1, "/path/to/file3", "file3.pdf", "2023-03-29");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (3, "/path/to/file4", "file4.pdf", "2023-03-28");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (2, "/path/to/file5", "file5.pdf", "2023-03-27");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (3, "/path/to/file6", "file6.pdf", "2023-03-26");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (1, "/path/to/file7", "file7.pdf", "2023-03-25");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (2, "/path/to/file8", "file8.pdf", "2023-03-24");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (1, "/path/to/file9", "file9.pdf", "2023-03-23");
+INSERT INTO scandoc (scandoc_type_id, file_path, file_name, created_at) VALUES (3, "/path/to/file10", "file10.pdf", "2023-03-22");
+
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (1, 'Form Type A');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (2, 'Form Type B');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (3, 'Form Type C');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (4, 'Form Type D');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (5, 'Form Type E');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (6, 'Form Type F');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (7, 'Form Type G');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (8, 'Form Type H');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (9, 'Form Type I');
+INSERT INTO `scanform_type` (`id`, `title`) VALUES (10, 'Form Type J');
+
+INSERT INTO `scanform` (`id`, `scanform_type_id`, `file_path`, `file_name`, `created_at`) VALUES (1, 1, 'path/to/file1', 'file1.pdf', '2022-01-01');
+INSERT INTO `scanform` (`id`, `scanform_type_id`, `file_path`, `file_name`, `created_at`) VALUES (2, 2, 'path/to/file2', 'file2.pdf', '2022-01-02');
+INSERT INTO `scanform` (`id`, `scanform_type_id`, `file_path`, `file_name`, `created_at`) VALUES (3, 3, 'path/to/file3', 'file3.pdf', '2022-01-03');
+INSERT INTO `scanform` (`id`, `scanform_type_id`, `file_path`, `file_name`, `created_at`) VALUES (4, 4, 'path/to/file4', 'file4.pdf', '2022-01-04');
+INSERT INTO `scanform` (`id`, `scanform_type_id`, `file_path`, `file_name`, `created_at`) VALUES (5, 5, 'path/to/file5', 'file5.pdf', '2022-01-05');
+INSERT INTO `scanform` (`id`, `scanform_type_id`, `file_path`, `file_name`, `created_at`) VALUES (6, 6, 'path/to/file6', 'file6.pdf
